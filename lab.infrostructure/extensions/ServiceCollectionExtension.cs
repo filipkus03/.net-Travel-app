@@ -19,7 +19,7 @@ namespace lab.infrostructure.extensions
             services.AddDbContext<Lab3DbContext>(options => options.UseSqlServer(
                     configuration.GetConnectionString("Airport")));
 
-            services.AddDefaultIdentity<ApplicationUser>()
+            services.AddDefaultIdentity<IdentityUser>()
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<Lab3DbContext>();
         }
